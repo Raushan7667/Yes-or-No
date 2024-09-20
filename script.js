@@ -70,6 +70,9 @@ document.getElementById("noBtn").addEventListener("mouseover", function() {
     const x = Math.random() * window.innerWidth - button.offsetWidth;
     const y = Math.random() * window.innerHeight - button.offsetHeight;
 
+      if(x<0)x = 0;
+    if(y<0)y = 0;
+    
     button.style.position = 'absolute';
     button.style.left = `${x}px`;
     button.style.top = `${y}px`;
